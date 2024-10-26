@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-function Layout() {
+function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <main className="container">Children</main>
+      <main className="container">{children}</main>
       <Footer />
     </>
   );
