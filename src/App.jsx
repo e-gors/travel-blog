@@ -1,9 +1,7 @@
+import Layout from "./modules/layout/Layout";
+
 function App() {
-  return (
-    <>
-      <h1>Travel Blog - Eastern Visayas</h1>
-    </>
-  );
+  return <Layout />;
 }
 
 export default App;
