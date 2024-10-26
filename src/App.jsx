@@ -1,10 +1,13 @@
-import Layout from "./modules/layout/Layout";
+import Footer from "./layout/Footer";
+import Navbar from "./layout/Navbar";
 
 function App() {
   return (
-    <Layout>
-      <h1>This is a children</h1>
-    </Layout>
+    <>
+      <Navbar />
+      <main className="container"></main>
+      <Footer />
+    </>
   );
 }
 
