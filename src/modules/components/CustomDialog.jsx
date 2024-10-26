@@ -1,28 +1,16 @@
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { useState } from "react";
 
-export default function CustomDialog() {
-  let [isOpen, setIsOpen] = useState(true);
-
-  function open() {
-    setIsOpen(true);
-  }
-
-  function close() {
-    setIsOpen(false);
-  }
-
+export default function CustomDialog({
+  open,
+  setOpen,
+  title = "Dialog Title",
+  description = "Dialog Decriptions",
+  buttonCloseLabel = "Got it, Thanks",
+}) {
   return (
     <>
-      <Button
-        onClick={open}
-        className="rounded-md bg-black/20 py-2 px-4 text-sm font-medium text-white focus:outline-none data-[hover]:bg-black/30 data-[focus]:outline-1 data-[focus]:outline-white"
-      >
-        Open dialog
-      </Button>
-
       <Dialog
-        open={isOpen}
+        open={open}
         as="div"
         className="relative z-10 focus:outline-none"
         onClose={close}
@@ -37,18 +25,15 @@ export default function CustomDialog() {
                 as="h3"
                 className="text-base/7 font-medium text-white"
               >
-                Payment successful
+                {title}
               </DialogTitle>
-              <p className="mt-2 text-sm/6 text-white/50">
-                Your payment has been successfully submitted. We’ve sent you an
-                email with all of the details of your order.
-              </p>
+              <p className="mt-2 text-sm/6 text-white/50">{description}</p>
               <div className="mt-4">
                 <Button
                   className="inline-flex items-center gap-2 rounded-md bg-gray-700 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
-                  onClick={close}
+                  onClick={() => setOpen(false)}
                 >
-                  Got it, thanks!
+                  {buttonCloseLabel}
                 </Button>
               </div>
             </DialogPanel>
