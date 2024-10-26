@@ -1,4 +1,3 @@
-import { Menu } from "@headlessui/react";
 import {
   HomeIcon,
   InformationCircleIcon,
