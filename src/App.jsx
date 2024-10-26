@@ -4,71 +4,15 @@ import Navbar from "./layout/Navbar";
 
 import React, { useState, useEffect } from "react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
+import { destinations } from "./_mock/destinations";
+import { testimonials } from "./_mock/testimonials";
+import { faqs } from "./_mock/faqs";
 
 const backgrounds = [
   "url(https://source.unsplash.com/random/1920x1080/?travel,nature)",
   "url(https://source.unsplash.com/random/1920x1080/?adventure,mountains)",
   "url(https://source.unsplash.com/random/1920x1080/?beach,ocean)",
   "url(https://source.unsplash.com/random/1920x1080/?forest,river)",
-];
-
-const destinations = [
-  {
-    title: "Santorini, Greece",
-    description: "Experience the stunning views of Santorini.",
-    location: "Greece",
-    info: "Perfect for sunsets and ocean views.",
-    image: "https://source.unsplash.com/random/400x300/?santorini",
-  },
-  {
-    title: "Kyoto, Japan",
-    description: "Discover the beauty of Kyoto.",
-    location: "Japan",
-    info: "Known for its temples and cherry blossoms.",
-    image: "https://source.unsplash.com/random/400x300/?kyoto",
-  },
-  {
-    title: "Banff, Canada",
-    description: "Explore the serene landscapes of Banff.",
-    location: "Canada",
-    info: "A paradise for nature lovers and hikers.",
-    image: "https://source.unsplash.com/random/400x300/?banff",
-  },
-];
-
-const testimonials = [
-  {
-    message:
-      "The trip to Santorini was unforgettable! Every moment was perfect.",
-    profileImage: "https://source.unsplash.com/random/100x100/?portrait",
-    name: "Jane Doe",
-    date: "May 5, 2023",
-    destination: "Santorini, Greece",
-  },
-  {
-    message: "Kyoto’s beauty took my breath away. Highly recommended!",
-    profileImage: "https://source.unsplash.com/random/100x100/?person",
-    name: "John Smith",
-    date: "April 18, 2023",
-    destination: "Kyoto, Japan",
-  },
-];
-
-const faqs = [
-  {
-    question: "What destinations do you cover?",
-    answer:
-      "We offer curated travel experiences to over 50 countries across six continents.",
-  },
-  {
-    question: "Do you offer travel insurance?",
-    answer: "Yes, travel insurance is included in all our packages.",
-  },
-  {
-    question: "How can I cancel my trip?",
-    answer:
-      "You can cancel your trip up to 7 days before departure with a full refund.",
-  },
 ];
 
 function App() {
